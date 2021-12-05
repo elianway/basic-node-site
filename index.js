@@ -5,7 +5,7 @@ const allFiles = fs.readdirSync('./', { withFileTypes: true })
 
 const htmlFiles = allFiles
   .filter((file) => {
-    return /^.+\.(html|css)$/.test(entry.name);
+    return /^.+\.(html|css)$/.test(file.name);
   })
   .map((file) => {
     if (file.name.endsWith(".html")) {
